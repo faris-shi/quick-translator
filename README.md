@@ -8,7 +8,7 @@ Quick Translator is a free and unlimited translation library, it mixed with Goog
 
 ## Introduction
 
-YOU DAO Translation is a popular translation tool for English learning beginner in China. it provides some useful functions such as `collins dictionary`, `usual phrases` and `related words`. However, I always need to open two tabs for both `Google Translation` and `YOU DAO Translation` to compare to them and get accurate and exact meanings of words. Meanwhile, it is why I do this job.
+YOU DAO Translation is a popular translation tool for English learning beginner in China. it provides some useful functions such as `collins dictionary`, `usual phrases` and `related words`. However, I always need to open two tabs for both `Google Translation` and `YOU DAO Translation` to compare to them and get accurate and exact meanings of words. Therefore, it is the reason why I do this job.
 
 
 
@@ -26,8 +26,8 @@ YOU DAO Translation is a popular translation tool for English learning beginner 
 **DISCLAIMER:** this is an unofficial library using [Google Translation](https://translate.google.com/) and [YOU DAO Translation](http://dict.youdao.com/) WebPage and WebAPI.
 
 - The maximum character limit on a single text is 15k.
-- This library can not guarantee it could work properly at all times due to the development of these APIs.
-- If you want to use a stable API or be for the business purpose,  I recommend you to use the official API.
+- This library can not guarantee it works properly at all times due to the development of these APIs.
+- If you want to use a stable API or for the commerical purpose,  I recommend you to use the official API.
 - If you get Http errors such 50x, 60x, maybe your IP is banned by Google or YOU DAO due to security policy.
 
 
