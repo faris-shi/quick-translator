@@ -1,5 +1,5 @@
 # Quick Translator
-Quick Translator is a free and unlimited translation library, it mixed with Google Translation and YOU DAO Translation that implements their API unofficially. Therefore, this library is only for individual and study purposes. If you are for other purposes, please see the official version:
+Quick Translator is a free and unlimited translation library, it mixed with Google Translation and YOU DAO Translation that implements their API unofficially. Therefore, this library is only for individual and study purposes. please see the official version for other purposes:
 
 - [Google Translation](https://translate.google.com/)
 - [YOU DAO Translation](http://dict.youdao.com/)
