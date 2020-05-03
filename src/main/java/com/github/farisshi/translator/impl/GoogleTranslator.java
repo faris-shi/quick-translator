@@ -127,15 +127,19 @@ class GoogleTranslator extends AbstractTranslator {
                 synonym.setTranslation(item.getString(0));
                 synonym.setSynonyms(item.getJSONArray(1).toJavaList(String.class));
 
-                double frequency = item.getDouble(3);
-                if (frequency > 0.1) {
-                    synonym.setFrequency(Synonym.Frequency.COMMON);
-                } else if (frequency > 0.001) {
-                    synonym.setFrequency(Synonym.Frequency.UNCOMMON);
-                } else {
-                    synonym.setFrequency(Synonym.Frequency.RARE);
+                if(item.size() >= 4) {
+                    double frequency = item.getDouble(3);
+                    if (frequency > 0.1) {
+                        synonym.setFrequency(Synonym.Frequency.COMMON);
+                    } else if (frequency > 0.001) {
+                        synonym.setFrequency(Synonym.Frequency.UNCOMMON);
+                    } else {
+                        synonym.setFrequency(Synonym.Frequency.RARE);
+                    }
                 }
-                list.add(synonym);
+                if(synonym.getFrequency() != null && !synonym.getFrequency().equals(Synonym.Frequency.RARE)) {
+                    list.add(synonym);
+                }
             }
             map.put(wordType, list);
         }
