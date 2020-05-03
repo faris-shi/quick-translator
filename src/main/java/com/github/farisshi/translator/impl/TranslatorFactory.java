@@ -34,24 +34,31 @@ public class TranslatorFactory extends AbstractTranslator{
                 return youDaoTranslator.translate(word, sourceLanguage, destLanguage);
             default:
                 TranslationResult googleResult = googleTranslator.translate(word, sourceLanguage, destLanguage);
-                TranslationResult youdaoResult = youDaoTranslator.translate(word, sourceLanguage, destLanguage);
-                mergeResult(googleResult, youdaoResult);
-                return youdaoResult;
+                if(isSingleWord(word)) {
+                    TranslationResult youdaoResult = youDaoTranslator.translate(word, sourceLanguage, destLanguage);
+                    googleResult= mergeResult(googleResult, youdaoResult);
+                }
+                return googleResult;
         }
     }
 
     @Override
     public List<String> suggest(String word) throws IOException {
-        if(word.contains(" ")){
+        if(!isSingleWord(word)){
             return Collections.emptyList();
         }
         return googleTranslator.suggest(word);
     }
 
-    private void mergeResult(TranslationResult googleResult, TranslationResult youdaoResult){
+    private TranslationResult mergeResult(TranslationResult googleResult, TranslationResult youdaoResult){
         youdaoResult.setOriginalLanguage(googleResult.getOriginalLanguage());
         youdaoResult.setSynonyms(googleResult.getSynonyms());
         youdaoResult.setTranslation(googleResult.getTranslation());
         youdaoResult.setPossibleMistake(googleResult.getPossibleMistake());
+        return youdaoResult;
+    }
+
+    private boolean isSingleWord(String word){
+        return !word.contains(" ");
     }
 }

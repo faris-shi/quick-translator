@@ -17,7 +17,7 @@ import java.util.*;
 import static java.util.stream.Collectors.toList;
 
 
-public class YouDaoTranslator extends AbstractTranslator {
+class YouDaoTranslator extends AbstractTranslator {
 
     private static final Map<String, String> HEADERS = new HashMap<>();
 

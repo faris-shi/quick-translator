@@ -18,7 +18,7 @@ import java.util.Map;
 
 import static com.github.farisshi.translator.util.TTKUtils.getTK;
 
-public class GoogleTranslator extends AbstractTranslator {
+class GoogleTranslator extends AbstractTranslator {
 
 
     public GoogleTranslator(TranslationConfig config) {
