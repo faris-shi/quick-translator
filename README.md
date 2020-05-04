@@ -27,7 +27,7 @@ YOU DAO Translation is a popular translation tool for English learning beginner 
 
 - The maximum character limit on a single text is 15k.
 - This library can not guarantee it works properly at all times due to the development of these APIs.
-- If you want to use a stable API or for the commerical purpose,  I recommend you to use the official API.
+- If you want to use a stable API or for the commerical purpose,  I highly recommend you to use the official API.
 - If you get Http errors such 50x, 60x, maybe your IP is banned by Google or YOU DAO due to security policy.
 
 
@@ -42,7 +42,7 @@ public static enum TranslatorType{
 }
 ```
 
-MIXED is default TranslatorType, it means you can use the following codes to get a mixed translator that will return a trnslation result coming from both Google and YOU DAO.
+MIXED is default TranslatorType, it means you can use the following codes to get a mixed translator that will return a translation result coming from both Google and YOU DAO.
 
 ```sql
 Translator translator = new Translator.Builder()
@@ -73,9 +73,7 @@ Or, give both languages:
 TranslationResult result = translator.translate("word", Language.English, Language.Chinese_Simplified);
 ```
 
-YOUDAO options will be unavailable when you want to translate words with other languages except `English` and `Chinese_simplified`, Therefore, if you want to use other languages, please specify `GOOGLE` TranslatorType during building translator instance.
-
-
+YOUDAO options is unavailable when you want to translate words with other languages except `English` and `Chinese_simplified`, Therefore,  please specify `GOOGLE` TranslatorType during building translator instance for other languages translation.
 
 The library can provide some suggestions for the pieces of English single word.
 
@@ -258,7 +256,7 @@ List<String> suggestion = translator.suggest("cri");
 
 
 
-Language**
+**Language**
 
 ```txt
 Afrikaans("af"),
